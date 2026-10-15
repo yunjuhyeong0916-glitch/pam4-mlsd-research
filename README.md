@@ -8,18 +8,22 @@
 
 광운대학교 · 석사 학위논문 연구
 
-PAM4 수신기의 **DS-SBM·DP-SMM 비교 연구**와 **DP-SMM Journal 준비 연구**를 정리합니다. 경로 후보를 어디에, 몇 개 남기느냐에 따라 최종 판정이 어떻게 달라지는지 모델·RTL에서 확인하고 있습니다.
+PAM4 수신기의 **DS-SBM 학위논문 연구**와 후속 **DP-SMM Journal 준비 연구**를 정리합니다. 검출 구조의 후보 선택과 병렬 처리를 설계하고, 모델·RTL 검증에서 RFSoC 물리채널 평가로 연결합니다.
 
 <p>
 <a href="projects/pam4-mlsd-thesis/README.md"><img src="assets/readme/status-thesis.svg" alt="학위논문 · 진행 중" width="157" height="30"></a>
 <a href="projects/dp-smm-journal/README.md"><img src="assets/readme/status-journal.svg" alt="Journal · 진행 중" width="153" height="30"></a>
 </p>
 
-## 학위논문 | DS-SBM·DP-SMM 비교 (진행 중)
+## 학위논문 | DS-SBM 설계·RFSoC 검증 (진행 중)
 
-두 구조의 신호 경로·후보 보존·프레임 경계 갱신을 비교합니다. DP-SMM에서는 행렬 원소마다 경로를 하나 또는 두 개 남기는 코어에 동일 입력을 적용해, 후보 보존이 오류 수에 미치는 영향을 확인했습니다.
+**원고 마무리 중.** 상태별 두 생존 분기와 구간 메트릭 행렬 합성으로 PAM4 검출기를 설계했습니다. ZCU208·XM655·ISI 보드의 **4 GS/s·PAM4 8 Gb/s** 물리 경로에서 동작을 확인했습니다.
 
-[학위논문 프로젝트](projects/pam4-mlsd-thesis/README.md) · [구조 비교](projects/pam4-mlsd-thesis/docs/architecture.md) · [모델·RTL 비교 결과](projects/pam4-mlsd-thesis/docs/validation.md)
+<a href="projects/pam4-mlsd-thesis/docs/implementation.md"><img src="projects/pam4-mlsd-thesis/assets/rfsoc_signal_path.png" alt="DS-SBM 학위논문의 DAC·물리채널·ADC 송수신 경로" width="840"></a>
+
+추정 전체 경로 손실 **약 41 dB @ 2 GHz**, PRBS7 **BER < 10⁻⁷**, PRBS15 **BER < 2×10⁻⁶**. 검출기 단독 자원은 RS-ACS 대비 **LUT 35.7%·FF 22.5% 감소**했습니다.
+
+[학위논문 프로젝트](projects/pam4-mlsd-thesis/README.md) · [검출기 구조](projects/pam4-mlsd-thesis/docs/architecture.md) · [RFSoC 구현](projects/pam4-mlsd-thesis/docs/implementation.md) · [측정·자원 결과](projects/pam4-mlsd-thesis/docs/validation.md)
 
 ## Journal 준비 | DP-SMM 설계·검증 (진행 중)
 
@@ -33,9 +37,9 @@ PAM4 수신기의 **DS-SBM·DP-SMM 비교 연구**와 **DP-SMM Journal 준비 �
 
 ![DS-SBM과 DP-SMM의 21-tap RX FFE 신호 경로, 후보 보존 위치와 비용 재평가 비교](projects/dp-smm-journal/assets/ds_sbm_dp_smm_21tap_comparison.svg)
 
-[비교 그림 설명](projects/dp-smm-journal/README.md#ds-sbm에서-확장한-점) · [검증 현황](docs/validation-status.md)
+[후속 DP-SMM의 구조 비교](projects/dp-smm-journal/docs/ds-sbm-comparison.md) · [후보 보존 효과](projects/dp-smm-journal/docs/candidate-retention.md) · [검증 현황](docs/validation-status.md)
 
-DP-SMM 보드 측정은 예정입니다. 현재 모델·RTL·FPGA 구현 결과와 A-SSCC의 DS-SBM 실측 결과는 각 프로젝트에서 확인할 수 있습니다.
+DP-SMM 보드 측정은 예정입니다. 두 경로 보존의 모델·RTL 비교와 FPGA 구현 결과는 Journal 프로젝트에 정리했습니다.
 
 ## 관련 연구·개발 방법
 

@@ -9,18 +9,20 @@
 </p>
 <!-- /page-navigation:top -->
 
-기준일: **2026-10-07**.
+기준일: **2026-10-15**.
 
-## 학위논문 | DS-SBM·DP-SMM 비교 (진행 중)
+## 학위논문 | DS-SBM 설계·RFSoC 검증 (진행 중)
+
+원고 마무리 단계입니다. DS-SBM의 동작 설명과 RFSoC 구현·측정 결과를 정리했습니다.
 
 | 항목 | 결과 | 조건 |
 |---|---|---|
-| 구조 비교 | 신호 경로·행렬 후보·경계 PM 갱신 비교 | DS-SBM과 DP-SMM |
-| 후보 보존 효과 | R=2의 오류 수가 R=1보다 36.9%·46.1% 감소 | memory-2 합성 응답 A·B, SNR 16 dB, 경계 후보 수 K_H=2 고정 |
-| R=1/R=2 코어 RTL | 참조 출력·메트릭·경로 정보 일치 | 연속·간격 입력, reset 후 재시작 |
-| DP-SMM 실측 | 예정 | AWG 기반 ADC-DSP 수신 평가 |
+| 검출 구조 | 네 축소 상태·상태별 두 분기·행렬 원소별 한 경로 | 32심볼을 여덟 4심볼 구간으로 처리 |
+| 물리채널 BER | PRBS7 < 10⁻⁷, PRBS15 < 2×10⁻⁶ | 4 GS/s·PAM4 8 Gb/s, 추정 손실 약 41 dB @ 2 GHz, 선정 PR 응답 |
+| 검출기 자원 | LUT 166k·FF 62k | RS-ACS 대비 LUT 35.7%·FF 22.5% 감소 |
+| 전체 송수신기 | LUT 189,108·FF 188,846·DSP 950·BRAM 24.5 | TX·RX 필터와 인터페이스·제어 포함 |
 
-[동일 입력 비교·RTL 검증 조건](../projects/pam4-mlsd-thesis/docs/validation.md).
+[DS-SBM 구조](../projects/pam4-mlsd-thesis/docs/architecture.md) · [측정·구현 결과](../projects/pam4-mlsd-thesis/docs/validation.md)
 
 ## Journal 준비 | DP-SMM (진행 중)
 
@@ -31,7 +33,7 @@
 | 검출기 FPGA 자원 | LUT 266,664·FF 168,330·BRAM 240·DSP 1,664 | Journal 초안의 post-route 구현, RX FFE 제외 |
 | 보드 실측 | 예정 | 21-tap RX FFE + DP-SMM, BER·PR 등고선·연속 처리율 |
 
-[Journal RTL 검증·구현 조건](../projects/dp-smm-journal/docs/validation.md).
+[Journal RTL 검증·구현 조건](../projects/dp-smm-journal/docs/validation.md) · [동일 입력의 후보 보존 효과](../projects/dp-smm-journal/docs/candidate-retention.md).
 
 [A-SSCC DS-SBM 실측·구현 결과](https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/zcu208-pam4-dsp-portfolio/docs/validation.md)
 

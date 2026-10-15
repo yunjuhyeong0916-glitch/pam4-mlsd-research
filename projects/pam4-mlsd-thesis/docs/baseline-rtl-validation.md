@@ -11,7 +11,7 @@
 
 [학위논문 검증 결과](validation.md) · [A-SSCC DS-SBM 측정·구현 결과](https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/zcu208-pam4-dsp-portfolio/docs/validation.md)
 
-기준일: **2026-10-07**. 2026-09-09 RTL을 사용한 사전 회귀 기록입니다. 학위논문의 R=1/R=2 코어 검증과 Journal 초안의 개정 K=2 검증은 별도의 결과입니다.
+기준일: **2026-10-07**. 2026-09-09 RTL을 사용한 사전 회귀 기록입니다. DP-SMM의 R=1/R=2 코어 검증과 Journal 초안의 개정 K=2 검증은 별도의 결과입니다.
 
 이 기준 RTL은 이전 상태별 nearest branch 후보 두 개와 destination rescue를 사용하고, 8-lane 메트릭 타일의 변환을 32-lane 경로에 연결합니다.
 

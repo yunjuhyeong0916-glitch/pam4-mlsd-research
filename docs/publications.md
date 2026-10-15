@@ -11,11 +11,11 @@
 
 ## 준비 중인 연구
 
-- **학위논문 · DS-SBM·DP-SMM 비교 (진행 중):** 두 구조의 차이와 동일 입력의 후보 보존 효과를 평가했습니다. DP-SMM 실측은 예정입니다. [프로젝트](../projects/pam4-mlsd-thesis/README.md)
+- **석사 학위논문 · 원고 마무리 중:** *A PAM4 Reduced-State Maximum-Likelihood Sequence Detector Using Dual Survivors and Segmented Metric Matrices*. DS-SBM 검출 구조와 RFSoC 물리채널 BER·자원 결과를 정리합니다. [프로젝트](../projects/pam4-mlsd-thesis/README.md)
 - **Journal · DP-SMM (진행 중):** *A Segmented Metric-Matrix-Based MLSD Architecture with Dual-Path Reduced-State Detection for PAM4 Wireline Transceivers on an RFSoC Platform*. 구간 메트릭 행렬의 두 경로 후보 보존·실제 이력 재평가와 FPGA 구현을 다루는 원고를 준비 중입니다. [프로젝트](../projects/dp-smm-journal/README.md)
 - **DP-SMM 특허 출원 준비 중:** 행렬 원소별 두 경로 보존과 계층적 메트릭 합성을 이용한 PAM4 검출기 구조. [기술 개요](../projects/dp-smm-journal/README.md)
 
-## 비교 연구의 기준 논문
+## 관련 A-SSCC 연구
 
 [An FPGA-Verified DAC/ADC-DSP-Based PAM4 Transceiver with Dual-Survivor Segmented Branch Metric-Matrix-Based Reduced-State MLSD](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351) — A-SSCC 2026, 채택·발표 예정(2026-10-07 기준).
 

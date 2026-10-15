@@ -9,7 +9,7 @@
 </p>
 <!-- /page-navigation:top -->
 
-[검증·구현 결과](validation.md) · [DS-SBM과의 구조 비교](../../pam4-mlsd-thesis/docs/architecture.md)
+[검증·구현 결과](validation.md) · [DS-SBM과의 구조 비교](ds-sbm-comparison.md)
 
 ## 21-tap RX FFE를 사용하는 수신 구성
 
@@ -59,11 +59,11 @@ DP-SMM은 **Dual-Path Segmented Metric-Matrix** 기반 축소 상태 MLSD입니�
 
 ![실제 이력으로 비용을 재평가한 뒤 제안 2위 경로를 선택하는 DP-SMM 검증 사례](../assets/dp_smm_rescoring_selection.svg)
 
-기존 검증 벡터에서는 제안 비용이 21·22였던 두 경로가 실제 이력을 반영한 뒤 31·27로 바뀌어, 두 번째 경로가 최종 선택됐습니다. 유입 PM은 0인 조건으로, 두 경로를 유지한 덕분에 비용 순위가 바뀐 후보를 복원에 사용할 수 있었습니다. [RTL 대조와 복원 예](../../pam4-mlsd-thesis/docs/validation.md#두-번째-후보가-최종-선택에-사용된-예)
+기존 검증 벡터에서는 제안 비용이 21·22였던 두 경로가 실제 이력을 반영한 뒤 31·27로 바뀌어, 두 번째 경로가 최종 선택됐습니다. 유입 PM은 0인 조건으로, 두 경로를 유지한 덕분에 비용 순위가 바뀐 후보를 복원에 사용할 수 있었습니다. [RTL 대조와 복원 예](candidate-retention.md#두-번째-후보가-최종-선택에-사용된-예)
 
 선택한 경로의 정규화 PM과 생략 심볼은 다음 프레임으로 전달합니다. 현재 프레임의 복원은 합성 트리에 저장된 선택 정보를 따라 수행합니다. 후보 제거 단계에서 버린 경로는 재평가로 복구되지 않으므로, 전체 상태 MLSD의 최적성과는 구분해 성능을 평가합니다.
 
-[검증 결과](validation.md) · [학위논문의 후보 보존 비교](../../pam4-mlsd-thesis/docs/validation.md)
+[검증 결과](validation.md) · [후보 보존 비교](candidate-retention.md)
 
 <!-- page-navigation:bottom -->
 <p>

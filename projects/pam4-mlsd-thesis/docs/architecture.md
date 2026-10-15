@@ -1,6 +1,6 @@
 <a id="page-top"></a>
 
-# DS-SBM과 DP-SMM의 구조 비교
+# DS-SBM 검출 구조와 동작
 
 <!-- page-navigation:top -->
 <p>
@@ -9,37 +9,66 @@
 </p>
 <!-- /page-navigation:top -->
 
-[모델·RTL 비교 결과](validation.md) · [DS-SBM 설계 판단](https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/zcu208-pam4-dsp-portfolio/docs/design-decisions.md) · [DP-SMM 상세 구조](../../dp-smm-journal/docs/architecture.md)
+[RFSoC 구현](implementation.md) · [측정·자원 결과](validation.md) · [MLSD 개념](https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/docs/concepts/mlsd.md)
 
-## 관측 신호와 PR 목표
+## 분기 선택에서 프레임 판정까지
 
-![21-tap RX FFE를 사용하는 DS-SBM과 DP-SMM의 관측 신호·경로 보존·경계 갱신 비교](../../dp-smm-journal/assets/ds_sbm_dp_smm_21tap_comparison.svg)
+[![대표 이력으로 BM을 계산하고 구간 행렬 합성·PM 갱신·후보 경로 추적으로 이어지는 DS-SBM 동작](../assets/ds_sbm_operation.png)](../assets/ds_sbm_operation.png)
 
-DS-SBM은 21-tap RX FFE 뒤에 별도 3-tap PR FIR을 두고 그 출력을 관측합니다. DP-SMM의 보드 평가에도 **21-tap RX FFE**를 적용할 예정이며, FFE 출력을 직접 관측하고 세 탭 PR 목표를 후보 심볼열의 예상 샘플 계산에 사용합니다.
+관측 샘플과 후보의 예상값 사이의 제곱거리를 BM으로 계산합니다. 기초 구간의 비용을 먼저 구한 뒤, 합성한 프레임 행렬에 이전 프레임의 누적 PM을 결합합니다. 비용을 선택할 때 해당 심볼열의 복원 정보도 함께 전달합니다.
 
-이 차이를 포함한 수신기 전체 비교와, 같은 FFE 출력에서 후보 수만 바꾸는 코어 비교는 평가 대상이 다릅니다.
+## 네 축소 상태에서 두 생존 분기 전파
 
-## 경로 정보를 보존하는 위치
+기억 길이 2의 PAM4 전체 상태는 직전 두 심볼을 구분하는 16상태입니다. DS-SBM은 직전 심볼을 기준으로 네 상태로 묶고, 생략한 과거 심볼의 기여를 상태별 대표 이력으로 계산합니다. 해당 프레임의 기초 비용을 계산하는 동안에는 같은 대표 이력표를 사용합니다.
 
-![DS-SBM과 DP-SMM의 행렬 경로·이력 정보·프레임 경계 PM 비교](../assets/thesis_architecture_comparison.png)
+[![현재 심볼의 네 후보를 비교해 두 분기를 남기고 네 심볼 구간으로 전파하는 예](../assets/ds_sbm_dual_branches.png)](../assets/ds_sbm_dual_branches.png)
 
-| 항목 | DS-SBM | DP-SMM |
-|---|---|---|
-| Visible state | 4개 | 4개 |
-| 분기·BM 처리 | 상태별 두 survivor branch, 총 8개 전파 | 심볼당 64개 memory-2 BM 가설 생성 |
-| 기초 행렬 | 여덟 개의 4심볼 행렬 | 여덟 개의 4심볼 행렬 |
-| 원소별 경로 수 R | 최대 1개 | 최대 2개 |
-| 상위 합성 | 스칼라 비용의 min-plus 합성 | 제안 비용으로 두 경로 선택·이력 반영 비용 정보 전달 |
-| 프레임 경계 PM | visible state별 한 개 | visible state별 두 개, 경계 후보 수 K_H=2 |
-| 경로 복원 | 선택된 구간의 복원 정보 이용 | 하위 행렬의 상태·순위 정보를 따라 현재 32심볼 복원 |
+각 이전 축소 상태에서 현재 심볼의 네 후보를 비교해 비용이 작은 두 분기를 남깁니다. 그림의 관측값 1.8 예에서는 BM 0.04와 3.24의 분기가 선택됩니다. 네 상태에서 두 개씩, **심볼당 여덟 활성 분기**를 다음 경로 구성에 전달합니다.
 
-DS-SBM의 8개는 선택 후 전파하는 활성 분기 수이고, DP-SMM의 64개는 생성하는 BM 가설 수입니다.
+## 4심볼 기초 행렬의 원소에 한 경로 저장
 
-## 동일 조건에서 후보 보존 효과 확인
+선택한 분기로 구성할 수 있는 4심볼 경로를 시작·종료 축소 상태별로 비교합니다. 각 4×4 행렬 원소에는 최소 비용의 **한 경로와 복원 정보**를 보존합니다. 상태별 두 생존 분기와 행렬 원소별 한 경로는 서로 다른 단계의 선택입니다.
 
-DP-SMM 코어의 경계 후보 수 K_H=2, BM ROM, 입력 샘플, 초기 상태와 tie-break 규칙을 고정했습니다. 행렬 원소별 경로 수 R만 1과 2로 바꾸어 합성 신호의 오류와 RTL 동작을 비교했습니다.
+<details>
+<summary>비용 4.32의 경로가 기초 행렬에 저장되는 예</summary>
 
-R=1 비교 코어는 DP-SMM의 PR 처리·BM 생성·경계 후보 수를 유지하면서 행렬 원소별 경로 수만 하나로 제한한 구조입니다. [동일 입력 비교 결과](validation.md)
+[![같은 시작·종료 상태를 연결하는 세 경로의 비용 4.32·5.92·9.12를 비교해 한 경로를 선택](../assets/ds_sbm_base_matrix.png)](../assets/ds_sbm_base_matrix.png)
+
+시작·종료 상태를 코드 2로 고정한 예입니다. 세 후보의 네 BM을 더해 4.32·5.92·9.12를 얻고, 비용이 가장 작은 심볼 코드열 2·1·0·2의 복원 정보를 저장합니다.
+
+</details>
+
+## 여덟 기초 행렬을 32심볼 프레임으로 합성
+
+[![여덟 4심볼 행렬을 8·16·32심볼 구간으로 계층적으로 합성하는 트리](../assets/ds_sbm_matrix_tree.png)](../assets/ds_sbm_matrix_tree.png)
+
+왼쪽 구간의 종료 상태와 오른쪽 구간의 시작 상태가 같은 연결 후보의 비용을 더합니다. 네 중간 상태 가운데 최소 비용을 선택하는 min-plus 합성을 반복해 32심볼 프레임의 4×4 행렬을 만듭니다. 상위 단계에서도 원소별 한 경로와 그 경로를 선택한 중간 상태를 함께 전달합니다.
+
+## 프레임 경계 PM 갱신과 후보 복원
+
+프레임 행렬의 각 열에 이전 프레임의 네 PM을 더해 종료 상태별 최소 누적 비용을 구합니다. 선택한 시작·종료 상태와 합성 단계의 중간 상태를 따라가면 해당 비용을 만든 32심볼 후보를 복원할 수 있습니다. 종료 상태별로 선택한 경로의 직전 심볼은 다음 BM 계산의 대표 이력을 갱신하는 데 사용합니다.
+
+<details>
+<summary>PM 갱신과 32심볼 후보를 추적하는 수치 예제</summary>
+
+[![이전 PM 6·5·0·4를 프레임 행렬과 결합해 종료 상태별 PM을 선택](../assets/ds_sbm_pm_update.png)](../assets/ds_sbm_pm_update.png)
+
+이전 PM [6, 5, 0, 4]를 결합한 예에서 네 종료 상태의 PM은 [31.36, 32.96, 34.56, 39.36]입니다. 최소 PM의 종료 상태 0과 선택 시작 상태 2가 후보 복원의 출발점이 됩니다.
+
+[![선택한 중간 상태를 역으로 따라가 여덟 기초 구간의 32심볼 후보를 복원](../assets/ds_sbm_path_recovery.png)](../assets/ds_sbm_path_recovery.png)
+
+각 합성 단계에 저장한 선택 정보를 기초 행렬까지 따라가고, 여덟 구간의 네 심볼씩을 시간 순서로 연결합니다. 첫 구간의 2·1·0·2는 앞선 기초 행렬 예와 일치합니다.
+
+</details>
+
+| 처리 위치 | 보존·전달 정보 |
+|---|---|
+| 축소 상태별 분기 선택 | 상태별 두 분기, 총 8개/심볼 |
+| 구간 행렬의 각 원소 | 최소 비용 한 개와 해당 경로의 복원 정보 |
+| 프레임 경계 | 네 종료 상태의 PM과 선택 경로 정보 |
+| 후속 BM 계산 | 종료 상태별로 갱신한 대표 이력 |
+
+[수신 필터·프레임 연결·PS 제어](implementation.md) · [후속 DP-SMM과의 차이](../../dp-smm-journal/docs/ds-sbm-comparison.md)
 
 <!-- page-navigation:bottom -->
 <p>

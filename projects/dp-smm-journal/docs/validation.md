@@ -9,7 +9,7 @@
 </p>
 <!-- /page-navigation:top -->
 
-[검출기 구조](architecture.md) · [학위논문 비교 결과](../../pam4-mlsd-thesis/docs/validation.md)
+[검출기 구조](architecture.md) · [후보 보존 비교 결과](candidate-retention.md)
 
 ## 기존 고정소수점 참조 모델과 RTL 검증
 
@@ -21,7 +21,7 @@ DP-SMM 검출기의 후보 선택, 실제 이력을 반영한 비용, 프레임 
 | 행렬 K=1·경계 H=2 코어 | 4,096프레임 | 해당 참조 모델 일치 | 23클록·II=1 |
 | 기존 11-tap RX FFE 포함 경로 | 128프레임 | 참조 모델 일치 | 24클록·II=1 |
 
-K=1 비교 코어는 DP-SMM의 행렬 후보 수를 제한한 구조입니다. 각 코어를 대응 참조 모델과 비교해 구현 정합성을 확인했습니다. [학위논문의 동일 입력 R=1/R=2 평가](../../pam4-mlsd-thesis/docs/validation.md#동일-입력에서의-후보-보존-효과)
+K=1 비교 코어는 DP-SMM의 행렬 후보 수를 제한한 구조입니다. 각 코어를 대응 참조 모델과 비교해 구현 정합성을 확인했습니다. [동일 입력 R=1/R=2 평가](candidate-retention.md#동일-입력에서의-후보-보존-효과)
 
 ## 병렬 처리율
 
