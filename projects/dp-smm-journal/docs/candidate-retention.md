@@ -4,8 +4,8 @@
 
 <!-- page-navigation:top -->
 <p>
-  <a href="../README.md" title="Journal 프로젝트로 돌아가기"><img src="../../../assets/readme/nav-back-journal.svg" alt="Journal 프로젝트로 돌아가기" width="156" height="30"></a>
-  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="../README.md#page-top" title="Journal 프로젝트로 돌아가기"><img src="../../../assets/readme/nav-back-journal.svg" alt="Journal 프로젝트로 돌아가기" width="156" height="30"></a>
+  <a href="https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research#page-top" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
 </p>
 <!-- /page-navigation:top -->
 
@@ -50,12 +50,12 @@ Vivado XSim 2022.2에서 각 코어에 9,728개 고유 입력 프레임을 연�
 같은 시작·종료 상태에서 제안 비용은 순위 0이 21, 순위 1이 22였습니다. 실제 내부 심볼 이력을 반영하면 비용은 31과 27로 바뀌어 순위 1 경로가 선택됩니다. 이 벡터의 유입 PM은 0이므로, 순위 변화는 내부 이력을 반영한 비용에서 발생합니다. 저장한 선택 정보로 복원한 32심볼은 RTL 출력과 일치했습니다.
 
 
-[DP-SMM FPGA 구현·측정 계획](validation.md) · [DS-SBM과의 구조 비교](ds-sbm-comparison.md)
+[DP-SMM FPGA 구현·측정 계획](validation.md#page-top) · [DS-SBM과의 구조 비교](ds-sbm-comparison.md#page-top)
 
 <!-- page-navigation:bottom -->
 <p>
-  <a href="../README.md" title="Journal 프로젝트로 돌아가기"><img src="../../../assets/readme/nav-back-journal.svg" alt="Journal 프로젝트로 돌아가기" width="156" height="30"></a>
-  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="../README.md#page-top" title="Journal 프로젝트로 돌아가기"><img src="../../../assets/readme/nav-back-journal.svg" alt="Journal 프로젝트로 돌아가기" width="156" height="30"></a>
+  <a href="https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research#page-top" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
   <a href="#page-top" title="페이지 맨 위로 이동"><img src="../../../assets/readme/nav-top.svg" alt="페이지 맨 위로 이동" width="100" height="30"></a>
 </p>
 <!-- /page-navigation:bottom -->

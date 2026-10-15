@@ -1,19 +1,21 @@
 <a id="page-top"></a>
 
+<p align="right"><a href="README.en.md#page-top"><img src="../../assets/readme/nav-en.svg" alt="English" width="96" height="30"></a></p>
+
 # Journal 준비 | DP-SMM 기반 PAM4 검출기 (진행 중)
 
 <!-- page-navigation:top -->
 <p>
-  <a href="../README.md" title="연구 목록으로 돌아가기"><img src="../../assets/readme/nav-back-research.svg" alt="연구 목록으로 돌아가기" width="110" height="30"></a>
-  <a href="../../README.md" title="홈으로 돌아가기"><img src="../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="../README.md#page-top" title="연구 목록으로 돌아가기"><img src="../../assets/readme/nav-back-research.svg" alt="연구 목록으로 돌아가기" width="110" height="30"></a>
+  <a href="https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research#page-top" title="홈으로 돌아가기"><img src="../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
 </p>
 <!-- /page-navigation:top -->
 
-구간 계산에서 제외될 수 있는 대안 경로를 최종 판정에 활용하기 위해 **DP-SMM 수신 검출기**를 설계했습니다. [DS-SBM의 구간 행렬 구조](https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/zcu208-pam4-dsp-portfolio/docs/architecture.md)를 확장해 두 경로 후보를 남기고, [실제 심볼 이력으로 비용을 다시 계산](docs/architecture.md#실제-이력에-따른-비용과-프레임-경계-선택)한 뒤 최종 경로를 선택합니다.
+구간 계산에서 제외될 수 있는 대안 경로를 최종 판정에 활용하기 위해 **DP-SMM 수신 검출기**를 설계했습니다. [DS-SBM의 구간 행렬 구조](https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/zcu208-pam4-dsp-portfolio/docs/architecture.md#page-top)를 확장해 두 경로 후보를 남기고, [실제 심볼 이력으로 비용을 다시 계산](docs/architecture.md#실제-이력에-따른-비용과-프레임-경계-선택)한 뒤 최종 경로를 선택합니다.
 
 검출기 RTL과 참조 모델의 일치를 확인하고 FPGA 배치배선을 수행했습니다. **21-tap RX FFE + DP-SMM** 수신 구성의 보드 실측을 준비하고 있습니다.
 
-[검출기 구조](docs/architecture.md) · [RTL 검증·FPGA 구현](docs/validation.md) · [DS-SBM과의 구조 비교](docs/ds-sbm-comparison.md)
+[검출기 구조](docs/architecture.md#page-top) · [RTL 검증·FPGA 구현](docs/validation.md#page-top) · [DS-SBM과의 구조 비교](docs/ds-sbm-comparison.md#page-top)
 
 **DP-SMM 특허 출원 준비 중.**
 
@@ -34,7 +36,7 @@
 | 프레임 경계 | visible state별 PM 한 개 전달 | visible state별 PM·이력을 가진 후보 두 개 전달 |
 | 검출기 관측 입력 | 21-tap RX FFE 뒤 별도 3-tap PR FIR 출력 | 21-tap RX FFE 출력 직접 사용·PR 목표로 예상 샘플 계산 (보드 평가 예정) |
 
-DS-SBM의 ‘dual-survivor’는 상태별로 전파하는 두 survivor branch를 뜻합니다. DP-SMM의 ‘dual-path’는 같은 시작·종료 상태를 잇는 행렬 원소에 남기는 두 경로를 뜻합니다. [신호 경로·후보 보존 위치 비교](docs/ds-sbm-comparison.md)
+DS-SBM의 ‘dual-survivor’는 상태별로 전파하는 두 survivor branch를 뜻합니다. DP-SMM의 ‘dual-path’는 같은 시작·종료 상태를 잇는 행렬 원소에 남기는 두 경로를 뜻합니다. [신호 경로·후보 보존 위치 비교](docs/ds-sbm-comparison.md#page-top)
 
 </details>
 
@@ -60,18 +62,18 @@ DS-SBM의 ‘dual-survivor’는 상태별로 전파하는 두 survivor branch�
 | 행렬 K=1·경계 H=2 비교 코어 | 해당 참조 모델과 일치 | 행렬 후보 수를 제한한 비교 구조 |
 | 연속 입력 처리 | II=1 | 검출기 코어 지연 23클록 |
 
-32심볼·125 MHz·II=1의 설계 처리율은 **4 Gsymbol/s**, 비부호화 PAM4 **8 Gb/s**입니다. [FFE 통합 검증·FPGA 자원](docs/validation.md)
+32심볼·125 MHz·II=1의 설계 처리율은 **4 Gsymbol/s**, 비부호화 PAM4 **8 Gb/s**입니다. [FFE 통합 검증·FPGA 자원](docs/validation.md#page-top)
 
 ## 측정 준비
 
 **21-tap RX FFE + DP-SMM** 구성으로 보드 실측을 준비합니다. AWG 기반 ADC-DSP 수신 경로와 DAC–ISI 보드–ADC 송수신 경로에서 BER·PR 등고선·연속 처리율을 평가할 예정입니다.
 
-[A-SSCC DS-SBM](https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/zcu208-pam4-dsp-portfolio/README.md) · [DS-SBM 학위논문](../pam4-mlsd-thesis/README.md) · [연구 성과 논문](../../docs/publications.md)
+[A-SSCC DS-SBM](https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/zcu208-pam4-dsp-portfolio/README.md#page-top) · [DS-SBM 학위논문](../pam4-mlsd-thesis/README.md#page-top) · [연구 성과 논문](../../docs/publications.md#page-top)
 
 <!-- page-navigation:bottom -->
 <p>
-  <a href="../README.md" title="연구 목록으로 돌아가기"><img src="../../assets/readme/nav-back-research.svg" alt="연구 목록으로 돌아가기" width="110" height="30"></a>
-  <a href="../../README.md" title="홈으로 돌아가기"><img src="../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="../README.md#page-top" title="연구 목록으로 돌아가기"><img src="../../assets/readme/nav-back-research.svg" alt="연구 목록으로 돌아가기" width="110" height="30"></a>
+  <a href="https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research#page-top" title="홈으로 돌아가기"><img src="../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
   <a href="#page-top" title="페이지 맨 위로 이동"><img src="../../assets/readme/nav-top.svg" alt="페이지 맨 위로 이동" width="100" height="30"></a>
 </p>
 <!-- /page-navigation:bottom -->

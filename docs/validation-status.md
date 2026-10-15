@@ -4,8 +4,8 @@
 
 <!-- page-navigation:top -->
 <p>
-  <a href="README.md" title="문서 목록으로 돌아가기"><img src="../assets/readme/nav-back-docs.svg" alt="문서 목록으로 돌아가기" width="110" height="30"></a>
-  <a href="../README.md" title="홈으로 돌아가기"><img src="../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="README.md#page-top" title="문서 목록으로 돌아가기"><img src="../assets/readme/nav-back-docs.svg" alt="문서 목록으로 돌아가기" width="110" height="30"></a>
+  <a href="https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research#page-top" title="홈으로 돌아가기"><img src="../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
 </p>
 <!-- /page-navigation:top -->
 
@@ -22,7 +22,7 @@
 | 검출기 자원 | LUT 166k·FF 62k | RS-ACS 대비 LUT 35.7%·FF 22.5% 감소 |
 | 전체 송수신기 | LUT 189,108·FF 188,846·DSP 950·BRAM 24.5 | TX·RX 필터와 인터페이스·제어 포함 |
 
-[DS-SBM 구조](../projects/pam4-mlsd-thesis/docs/architecture.md) · [측정·구현 결과](../projects/pam4-mlsd-thesis/docs/validation.md)
+[DS-SBM 구조](../projects/pam4-mlsd-thesis/docs/architecture.md#page-top) · [측정·구현 결과](../projects/pam4-mlsd-thesis/docs/validation.md#page-top)
 
 ## Journal 준비 | DP-SMM (진행 중)
 
@@ -33,14 +33,14 @@
 | 검출기 FPGA 자원 | LUT 266,664·FF 168,330·BRAM 240·DSP 1,664 | Journal 초안의 post-route 구현, RX FFE 제외 |
 | 보드 실측 | 예정 | 21-tap RX FFE + DP-SMM, BER·PR 등고선·연속 처리율 |
 
-[Journal RTL 검증·구현 조건](../projects/dp-smm-journal/docs/validation.md) · [동일 입력의 후보 보존 효과](../projects/dp-smm-journal/docs/candidate-retention.md).
+[Journal RTL 검증·구현 조건](../projects/dp-smm-journal/docs/validation.md#page-top) · [동일 입력의 후보 보존 효과](../projects/dp-smm-journal/docs/candidate-retention.md#page-top).
 
-[A-SSCC DS-SBM 실측·구현 결과](https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/zcu208-pam4-dsp-portfolio/docs/validation.md)
+[A-SSCC DS-SBM 실측·구현 결과](https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/zcu208-pam4-dsp-portfolio/docs/validation.md#page-top)
 
 <!-- page-navigation:bottom -->
 <p>
-  <a href="README.md" title="문서 목록으로 돌아가기"><img src="../assets/readme/nav-back-docs.svg" alt="문서 목록으로 돌아가기" width="110" height="30"></a>
-  <a href="../README.md" title="홈으로 돌아가기"><img src="../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="README.md#page-top" title="문서 목록으로 돌아가기"><img src="../assets/readme/nav-back-docs.svg" alt="문서 목록으로 돌아가기" width="110" height="30"></a>
+  <a href="https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research#page-top" title="홈으로 돌아가기"><img src="../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
   <a href="#page-top" title="페이지 맨 위로 이동"><img src="../assets/readme/nav-top.svg" alt="페이지 맨 위로 이동" width="100" height="30"></a>
 </p>
 <!-- /page-navigation:bottom -->

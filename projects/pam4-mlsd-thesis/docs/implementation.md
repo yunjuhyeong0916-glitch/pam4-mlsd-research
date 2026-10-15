@@ -4,12 +4,12 @@
 
 <!-- page-navigation:top -->
 <p>
-  <a href="../README.md" title="학위논문 프로젝트로 돌아가기"><img src="../../../assets/readme/nav-back-thesis.svg" alt="학위논문 프로젝트로 돌아가기" width="158" height="30"></a>
-  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="../README.md#page-top" title="학위논문 프로젝트로 돌아가기"><img src="../../../assets/readme/nav-back-thesis.svg" alt="학위논문 프로젝트로 돌아가기" width="158" height="30"></a>
+  <a href="https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research#page-top" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
 </p>
 <!-- /page-navigation:top -->
 
-[DS-SBM 구조](architecture.md) · [측정·자원 결과](validation.md) · [Vitis 보드 구동 절차](https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/zcu208-pam4-dsp-portfolio/docs/vitis-bringup.md)
+[DS-SBM 구조](architecture.md#page-top) · [측정·자원 결과](validation.md#page-top) · [Vitis 보드 구동 절차](https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/zcu208-pam4-dsp-portfolio/docs/vitis-bringup.md#page-top)
 
 ## DAC에서 물리채널을 거쳐 검출기까지
 
@@ -35,7 +35,7 @@ RX FFE는 채널 왜곡을 보상하고, 뒤의 PR 필터는 검출기에 사용
 
 고속 필터·검출·PRBS 검사는 PL에서 처리하고, PS에서는 필터 계수와 PR 응답을 설정하고 결과를 수집합니다. 설정을 바꾼 뒤 기준 PRBS와 복원 비트의 시간 순서를 맞추고, 같은 유효 구간의 검사 비트 수와 오류 비트 수로 BER을 계산합니다.
 
-JTAG 다운로드와 CLK104·RFDC 초기화, 계수 적용은 [Vivado·Vitis 구동 절차](https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/zcu208-pam4-dsp-portfolio/docs/vitis-bringup.md)에서 볼 수 있습니다.
+JTAG 다운로드와 CLK104·RFDC 초기화, 계수 적용은 [Vivado·Vitis 구동 절차](https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/zcu208-pam4-dsp-portfolio/docs/vitis-bringup.md#page-top)에서 볼 수 있습니다.
 
 ## 전치형 FIR의 자원 효과
 
@@ -45,8 +45,8 @@ JTAG 다운로드와 CLK104·RFDC 초기화, 계수 적용은 [Vivado·Vitis 구
 
 <!-- page-navigation:bottom -->
 <p>
-  <a href="../README.md" title="학위논문 프로젝트로 돌아가기"><img src="../../../assets/readme/nav-back-thesis.svg" alt="학위논문 프로젝트로 돌아가기" width="158" height="30"></a>
-  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="../README.md#page-top" title="학위논문 프로젝트로 돌아가기"><img src="../../../assets/readme/nav-back-thesis.svg" alt="학위논문 프로젝트로 돌아가기" width="158" height="30"></a>
+  <a href="https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research#page-top" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
   <a href="#page-top" title="페이지 맨 위로 이동"><img src="../../../assets/readme/nav-top.svg" alt="페이지 맨 위로 이동" width="100" height="30"></a>
 </p>
 <!-- /page-navigation:bottom -->

@@ -4,12 +4,12 @@
 
 <!-- page-navigation:top -->
 <p>
-  <a href="../README.md" title="Journal 프로젝트로 돌아가기"><img src="../../../assets/readme/nav-back-journal.svg" alt="Journal 프로젝트로 돌아가기" width="156" height="30"></a>
-  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="../README.md#page-top" title="Journal 프로젝트로 돌아가기"><img src="../../../assets/readme/nav-back-journal.svg" alt="Journal 프로젝트로 돌아가기" width="156" height="30"></a>
+  <a href="https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research#page-top" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
 </p>
 <!-- /page-navigation:top -->
 
-[검출기 구조](architecture.md) · [후보 보존 비교 결과](candidate-retention.md)
+[검출기 구조](architecture.md#page-top) · [후보 보존 비교 결과](candidate-retention.md#page-top)
 
 ## 기존 고정소수점 참조 모델과 RTL 검증
 
@@ -42,12 +42,12 @@ ZCU208·ZU48DR 배치배선 결과입니다. 검출기 코어 범위에는 RX FF
 
 **21-tap RX FFE + DP-SMM** 수신 구성에서 BER·PR 등고선·연속 처리율을 평가할 예정입니다. AWG 기반 ADC 수신 경로와 DAC–ISI 보드–ADC 송수신 경로를 사용할 계획입니다.
 
-[DS-SBM 시스템의 측정 결과](https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/zcu208-pam4-dsp-portfolio/docs/validation.md)
+[DS-SBM 시스템의 측정 결과](https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/zcu208-pam4-dsp-portfolio/docs/validation.md#page-top)
 
 <!-- page-navigation:bottom -->
 <p>
-  <a href="../README.md" title="Journal 프로젝트로 돌아가기"><img src="../../../assets/readme/nav-back-journal.svg" alt="Journal 프로젝트로 돌아가기" width="156" height="30"></a>
-  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="../README.md#page-top" title="Journal 프로젝트로 돌아가기"><img src="../../../assets/readme/nav-back-journal.svg" alt="Journal 프로젝트로 돌아가기" width="156" height="30"></a>
+  <a href="https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research#page-top" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
   <a href="#page-top" title="페이지 맨 위로 이동"><img src="../../../assets/readme/nav-top.svg" alt="페이지 맨 위로 이동" width="100" height="30"></a>
 </p>
 <!-- /page-navigation:bottom -->

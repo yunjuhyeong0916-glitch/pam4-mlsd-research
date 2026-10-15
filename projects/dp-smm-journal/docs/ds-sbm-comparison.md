@@ -4,12 +4,12 @@
 
 <!-- page-navigation:top -->
 <p>
-  <a href="../README.md" title="Journal 프로젝트로 돌아가기"><img src="../../../assets/readme/nav-back-journal.svg" alt="Journal 프로젝트로 돌아가기" width="156" height="30"></a>
-  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="../README.md#page-top" title="Journal 프로젝트로 돌아가기"><img src="../../../assets/readme/nav-back-journal.svg" alt="Journal 프로젝트로 돌아가기" width="156" height="30"></a>
+  <a href="https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research#page-top" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
 </p>
 <!-- /page-navigation:top -->
 
-[후보 보존·RTL 비교 결과](candidate-retention.md) · [DS-SBM 설계 판단](https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/zcu208-pam4-dsp-portfolio/docs/design-decisions.md) · [DP-SMM 상세 구조](architecture.md) · [DS-SBM 학위논문](../../pam4-mlsd-thesis/README.md)
+[후보 보존·RTL 비교 결과](candidate-retention.md#page-top) · [DS-SBM 설계 판단](https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/zcu208-pam4-dsp-portfolio/docs/design-decisions.md#page-top) · [DP-SMM 상세 구조](architecture.md#page-top) · [DS-SBM 학위논문](../../pam4-mlsd-thesis/README.md#page-top)
 
 ## 관측 신호와 PR 목표
 
@@ -39,12 +39,12 @@ DS-SBM의 8개는 선택 후 전파하는 활성 분기 수이고, DP-SMM의 64�
 
 DP-SMM 코어의 경계 후보 수 K_H=2, BM ROM, 입력 샘플, 초기 상태와 tie-break 규칙을 고정했습니다. 행렬 원소별 경로 수 R만 1과 2로 바꾸어 합성 신호의 오류와 RTL 동작을 비교했습니다.
 
-R=1 비교 코어는 DP-SMM의 PR 처리·BM 생성·경계 후보 수를 유지하면서 행렬 원소별 경로 수만 하나로 제한한 구조입니다. [동일 입력 비교 결과](candidate-retention.md)
+R=1 비교 코어는 DP-SMM의 PR 처리·BM 생성·경계 후보 수를 유지하면서 행렬 원소별 경로 수만 하나로 제한한 구조입니다. [동일 입력 비교 결과](candidate-retention.md#page-top)
 
 <!-- page-navigation:bottom -->
 <p>
-  <a href="../README.md" title="Journal 프로젝트로 돌아가기"><img src="../../../assets/readme/nav-back-journal.svg" alt="Journal 프로젝트로 돌아가기" width="156" height="30"></a>
-  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="../README.md#page-top" title="Journal 프로젝트로 돌아가기"><img src="../../../assets/readme/nav-back-journal.svg" alt="Journal 프로젝트로 돌아가기" width="156" height="30"></a>
+  <a href="https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research#page-top" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
   <a href="#page-top" title="페이지 맨 위로 이동"><img src="../../../assets/readme/nav-top.svg" alt="페이지 맨 위로 이동" width="100" height="30"></a>
 </p>
 <!-- /page-navigation:bottom -->

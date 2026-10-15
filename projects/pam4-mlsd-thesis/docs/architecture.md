@@ -4,12 +4,12 @@
 
 <!-- page-navigation:top -->
 <p>
-  <a href="../README.md" title="학위논문 프로젝트로 돌아가기"><img src="../../../assets/readme/nav-back-thesis.svg" alt="학위논문 프로젝트로 돌아가기" width="158" height="30"></a>
-  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="../README.md#page-top" title="학위논문 프로젝트로 돌아가기"><img src="../../../assets/readme/nav-back-thesis.svg" alt="학위논문 프로젝트로 돌아가기" width="158" height="30"></a>
+  <a href="https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research#page-top" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
 </p>
 <!-- /page-navigation:top -->
 
-[RFSoC 구현](implementation.md) · [측정·자원 결과](validation.md) · [MLSD 개념](https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/docs/concepts/mlsd.md)
+[RFSoC 구현](implementation.md#page-top) · [측정·자원 결과](validation.md#page-top) · [MLSD 개념](https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/docs/concepts/mlsd.md#page-top)
 
 ## 분기 선택에서 프레임 판정까지
 
@@ -68,12 +68,12 @@
 | 프레임 경계 | 네 종료 상태의 PM과 선택 경로 정보 |
 | 후속 BM 계산 | 종료 상태별로 갱신한 대표 이력 |
 
-[수신 필터·프레임 연결·PS 제어](implementation.md) · [후속 DP-SMM과의 차이](../../dp-smm-journal/docs/ds-sbm-comparison.md)
+[수신 필터·프레임 연결·PS 제어](implementation.md#page-top) · [후속 DP-SMM과의 차이](../../dp-smm-journal/docs/ds-sbm-comparison.md#page-top)
 
 <!-- page-navigation:bottom -->
 <p>
-  <a href="../README.md" title="학위논문 프로젝트로 돌아가기"><img src="../../../assets/readme/nav-back-thesis.svg" alt="학위논문 프로젝트로 돌아가기" width="158" height="30"></a>
-  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="../README.md#page-top" title="학위논문 프로젝트로 돌아가기"><img src="../../../assets/readme/nav-back-thesis.svg" alt="학위논문 프로젝트로 돌아가기" width="158" height="30"></a>
+  <a href="https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research#page-top" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
   <a href="#page-top" title="페이지 맨 위로 이동"><img src="../../../assets/readme/nav-top.svg" alt="페이지 맨 위로 이동" width="100" height="30"></a>
 </p>
 <!-- /page-navigation:bottom -->

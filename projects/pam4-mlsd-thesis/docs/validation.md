@@ -4,12 +4,12 @@
 
 <!-- page-navigation:top -->
 <p>
-  <a href="../README.md" title="학위논문 프로젝트로 돌아가기"><img src="../../../assets/readme/nav-back-thesis.svg" alt="학위논문 프로젝트로 돌아가기" width="158" height="30"></a>
-  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="../README.md#page-top" title="학위논문 프로젝트로 돌아가기"><img src="../../../assets/readme/nav-back-thesis.svg" alt="학위논문 프로젝트로 돌아가기" width="158" height="30"></a>
+  <a href="https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research#page-top" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
 </p>
 <!-- /page-navigation:top -->
 
-[DS-SBM 구조](architecture.md) · [RFSoC 구현](implementation.md) · [A-SSCC 프로젝트](https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/zcu208-pam4-dsp-portfolio/README.md)
+[DS-SBM 구조](architecture.md#page-top) · [RFSoC 구현](implementation.md#page-top) · [A-SSCC 프로젝트](https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/zcu208-pam4-dsp-portfolio/README.md#page-top)
 
 ## 물리채널 측정 조건
 
@@ -81,12 +81,12 @@ TX·RX 필터, DS-SBM과 인터페이스·제어를 포함한 전체 송수신�
 
 축소 상태별 두 생존 분기와 구간 행렬 합성으로 검출 연산을 구성하고, 필터·변환기·물리채널을 연결한 **8-Gb/s PAM4 송수신 경로**에서 동작을 확인했습니다. 200 Gb/s 이상급 인터페이스에 활용할 DSP 검출 로직을 목표로 한 연구이며, 고속 공정 구현과 병렬도 확장은 후속 과제입니다.
 
-[A-SSCC 논문 정보](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351) · [DS-SBM 설계 구조](architecture.md) · [후속 Journal·DP-SMM 연구](../../dp-smm-journal/README.md)
+[A-SSCC 논문 정보](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351) · [DS-SBM 설계 구조](architecture.md#page-top) · [후속 Journal·DP-SMM 연구](../../dp-smm-journal/README.md#page-top)
 
 <!-- page-navigation:bottom -->
 <p>
-  <a href="../README.md" title="학위논문 프로젝트로 돌아가기"><img src="../../../assets/readme/nav-back-thesis.svg" alt="학위논문 프로젝트로 돌아가기" width="158" height="30"></a>
-  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="../README.md#page-top" title="학위논문 프로젝트로 돌아가기"><img src="../../../assets/readme/nav-back-thesis.svg" alt="학위논문 프로젝트로 돌아가기" width="158" height="30"></a>
+  <a href="https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research#page-top" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
   <a href="#page-top" title="페이지 맨 위로 이동"><img src="../../../assets/readme/nav-top.svg" alt="페이지 맨 위로 이동" width="100" height="30"></a>
 </p>
 <!-- /page-navigation:bottom -->
